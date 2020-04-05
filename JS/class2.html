@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(firstName, lastName, birthYear) {
+            this._firstName = firstName;
+            this._lastName = lastName;
+            this._birthYear = birthYear;
+            this._getAge = function() {
+                var age = 2020 - this._birthYear;
+                return age;
+            }
+        }
+
+        var aPerson1 = new Person("Claudia", "Meier", 1983);
+        
+        document.write("Vorname: " + aPerson1._firstName + "<br>");
+        document.write("Nachname: " + aPerson1._lastName + "<br>");
+        var age = aPerson1._getAge();
+        document.write("Alter: " + age + "<br>");
+
+    </script>
+</body>
+
+</html>
